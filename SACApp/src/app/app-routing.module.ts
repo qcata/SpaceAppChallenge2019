@@ -8,6 +8,11 @@ const routes: Routes = [
   { path: 'status', loadChildren: './status/status.module#StatusPageModule' },
   { path: 'main', loadChildren: './main/main.module#MainPageModule' },
   { path: 'login', loadChildren: () => import('./authentication/login/login.module').then( m => m.LoginPageModule)},
+ //  { path: 'trashlist', loadChildren: './trashlist/trashlist.module#TrashlistPageModule' },
+  {
+    path: '',
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
 
 
   { path: 'register', loadChildren: './authentication/register/register.module#RegisterPageModule' },

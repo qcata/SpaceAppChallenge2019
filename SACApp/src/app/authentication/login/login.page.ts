@@ -26,7 +26,7 @@ export class LoginPage implements OnInit {
     console.log(this.authenticationService.login(user.value.username, user.value.password));
     if (this.authenticationService.login(user.value.username, user.value.password)) {
       localStorage.setItem('user', user.value.username);
-      this.route.navigate(['/home']);
+      this.route.navigate(['/trashlist']);
     }
     this.loginWarning = true;
   }

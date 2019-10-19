@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,16 +6,24 @@ import { Router } from '@angular/router';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
+
+
 
   constructor(
     private router: Router
-   ) { }
+  ) { }
 
-   login() {
-     this.router.navigateByUrl('/login');
-   }
-   status() {
-     this.router.navigate(['/status']);
-   }
+  ngOnInit() {
+    setTimeout(() => {
+      this.router.navigate(['/login']);
+    },
+      1500);
+  }
+  login() {
+    this.router.navigateByUrl('/login');
+  }
+  status() {
+    this.router.navigate(['/status']);
+  }
 }
