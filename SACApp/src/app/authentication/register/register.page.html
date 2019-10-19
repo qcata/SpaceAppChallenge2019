@@ -1,0 +1,47 @@
+<ion-content>
+  <ion-grid style="height: 100%">
+    <ion-row justify-content-center align-items-center style="height: 60%">
+
+      <ion-grid>
+        <ion-row justify-content-center align-items-center>
+          <ion-item>
+            <ion-label position="floating">Firstname</ion-label>
+            <ion-input [(ngModel)]="user.firstname" name="firstname" required></ion-input>
+          </ion-item>
+        </ion-row>
+        <ion-row justify-content-center align-items-center>
+          <ion-item>
+            <ion-label position="floating">Lastname</ion-label>
+            <ion-input [(ngModel)]="user.lastname" name="lastname" required></ion-input>
+          </ion-item>
+        </ion-row>
+        <ion-row justify-content-center align-items-center>
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input required [(ngModel)]="user.email" name="email"></ion-input>
+          </ion-item>
+        </ion-row>
+        <ion-row justify-content-center align-items-center>
+          <ion-item>
+            <ion-label position="floating">Username</ion-label>
+            <ion-input required [(ngModel)]="user.username" name="username"></ion-input>
+          </ion-item>
+        </ion-row>
+        <ion-row justify-content-center align-items-center style="margin-top: 20px;">
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input required type="password" [(ngModel)]="user.password" name="password"></ion-input>
+          </ion-item>
+        </ion-row>
+        <ion-row justify-content-center align-items-center style="margin-top: 20px;">
+          <ion-button shape="round">Register</ion-button>
+        </ion-row>
+      </ion-grid>
+    </ion-row>
+    <div class="ocean">
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+  </ion-grid>
+
+</ion-content>

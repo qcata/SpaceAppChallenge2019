@@ -11,11 +11,9 @@ export class HomePage {
   constructor(
     private router: Router
    ) { }
- 
-   ngOnInit() {
-   }
+
    login() {
-     this.router.navigateByUrl('/authentication');
+     this.router.navigateByUrl('/login');
    }
    status() {
      this.router.navigate(['/status']);
