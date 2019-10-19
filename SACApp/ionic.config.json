@@ -1,5 +1,7 @@
 {
   "name": "SACApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
