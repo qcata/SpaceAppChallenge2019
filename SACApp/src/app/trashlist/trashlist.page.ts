@@ -14,7 +14,9 @@ export class TrashlistPage implements OnInit {
   }
 
   share(){
-    this.socialSharing.shareViaFacebook("you has x points","arraylike string","url");
+    this.socialSharing.shareViaFacebook('public_profile', 'user_friends', 'email')
+    .then((res: SocialSharing) => console.log('Logged into Facebook!', res))
+    .catch(e => console.log('Error logging into Facebook', e));
   }
 
 
