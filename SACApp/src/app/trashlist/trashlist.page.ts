@@ -41,17 +41,20 @@ export class TrashlistPage implements OnInit {
   rightSide = this.trashlist.splice(0, this.trashList.length);
 
   constructor(private socialSharing: SocialSharing) { }
+ngOnInit() {
+}
 
+  // share(){
+  //   this.socialSharing.shareViaFacebook('public_profile', 'user_friends', 'email')
+  //   .then((res: SocialSharing) => console.log('Logged into Facebook!', res))
+  //   .catch(e => console.log('Error logging into Facebook', e));
+  // }
 
-  ngOnInit( ) {
-    console.log(this.trashlist);
-  }
-
-  share(){
-    this.socialSharing.shareViaFacebook('public_profile', 'user_friends', 'email')
-    .then((res: SocialSharing) => console.log('Logged into Facebook!', res))
-    .catch(e => console.log('Error logging into Facebook', e));
-  }
+  // share(){
+  //   this.socialSharing.shareViaFacebook('public_profile', 'user_friends', 'email')
+  //   .then((res: SocialSharing) => console.log('Logged into Facebook!', res))
+  //   .catch(e => console.log('Error logging into Facebook', e));
+  // }
 
 
 }

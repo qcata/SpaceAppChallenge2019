@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Informations</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <mat-accordion *ngFor="let item of informationList">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{item.name}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        {{item.description}}
+      </mat-panel-description>
+    </mat-expansion-panel>
+  </mat-accordion>
+</ion-content>
