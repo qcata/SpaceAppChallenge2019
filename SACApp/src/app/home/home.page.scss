@@ -9,10 +9,9 @@ body {
   overflow: hidden;
 }
 
-svg{
-    display:block;
-    margin:0 auto;
-  }
+.stars {
+  background: #2E8193;
+}
 
 .ocean { 
   height: 5%;
@@ -32,6 +31,47 @@ svg{
   animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
   transform: translate3d(0, 0, 0);
 }
+
+.loader {
+  height: 12em;
+  margin: -6em 0px 0px -6em;
+  padding: 10px;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  width: 12em;
+  z-index: 9999;
+  }
+
+  .title {
+    font-weight: 800;
+    color: transparent;
+    font-size: 3em;
+    background-position: 40% 50%;
+    background-clip: text !important;
+    position: relative;
+    text-align: center;
+    line-height: 120px;
+    letter-spacing: -6px;
+    font-family: 'Raleway', sans-serif;
+    
+    margin-bottom: 0em;
+  }
+  
+  .loader svg {
+  height: 12em;
+  width: 12em;
+  }
+  
+  .loader svg path {
+  stroke-width: 0px;
+  }
+  
+  .loader svg path {
+  fill: #2E8193;
+  stroke: none;
+  }
+
 
 .wave:nth-of-type(2) {
   top: -175px;

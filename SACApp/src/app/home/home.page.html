@@ -1,24 +1,24 @@
-<ion-header>
 
-  </ion-header>
-  
-  <ion-content>
-      <ion-grid style="height: 100%">
-          <ion-row justify-content-center align-items-center style="height: 80%">
-            <ion-grid>
-            <ion-row justify-content-center align-items-center> 
-              <ion-button shape="round" (click)="login()">Login</ion-button>
-            </ion-row>
-            <ion-row justify-content-center align-items-center style="margin-top: 15px;"> 
-              <ion-button shape="round" (click)="status()">Global status</ion-button> 
-            </ion-row>
-          </ion-grid>
-          </ion-row>
-      </ion-grid>
-  
+<ion-content>
+
+    <ion-row>
+        <ion-col text-center>
+          <div class="ui text container">
+              <div class="loader" >
+                  <svg width="48" height="48" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <path d="M 150,0 a 150,150 0 0,1 106.066,256.066 l -35.355,-35.355 a -100,-100 0 0,0 -70.711,-170.711 z" fill="#2E8193">
+                      <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 150 150" to="360 150 150" begin="0s" dur="2s" fill="freeze" repeatCount="indefinite"></animateTransform>
+                    </path>
+                  </svg>
+                  <div class="ui inverted title stars">
+                    . clean
+                  </div>
+              </div>
+          </div>      
+        </ion-col>
+      </ion-row>
     <div class="ocean">
-      <div class="wave"></div>
-      <div class="wave"></div>
-    </div>
-  </ion-content>
-  
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
+</ion-content>
