@@ -20,7 +20,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab2',
+        path: 'status',
         children: [
           {
             path: '',
@@ -30,25 +30,25 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab3',
+        path: 'informations',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+            import('../informations/informations.module').then(m => m.InformationsPageModule)
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/trashlist',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/trashlist',
     pathMatch: 'full'
   }
 ];
