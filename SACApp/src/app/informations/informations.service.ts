@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Injectable } from '@angular/core';
 
-@Component({
-  selector: 'app-tab3',
-  templateUrl: 'tab3.page.html',
-  styleUrls: ['tab3.page.scss']
+@Injectable({
+  providedIn: 'root'
 })
-export class Tab3Page {
+export class InformationsService {
+
+  constructor() { }
+
   public items: any[] = [
     {
       'name': 'Cigarettes (2,117,931)',
@@ -28,6 +29,9 @@ export class Tab3Page {
       'description': 'Bottle caps are small enough to be swallowed whole by birds or sea animals. This type of pollution can jam animal airways, or sit in their digestive systems causing them great discomfort and pain. 958,893 caps / lids were found in the clear-up with many more still in the sea.'
     }
   ];
-  constructor() { }
+
+  getInformations() {
+    return this.items;
+  }
 
 }

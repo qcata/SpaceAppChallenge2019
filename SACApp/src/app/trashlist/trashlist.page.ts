@@ -19,5 +19,11 @@ export class TrashlistPage implements OnInit {
     .catch(e => console.log('Error logging into Facebook', e));
   }
 
+  // share(){
+  //   this.socialSharing.shareViaFacebook('public_profile', 'user_friends', 'email')
+  //   .then((res: SocialSharing) => console.log('Logged into Facebook!', res))
+  //   .catch(e => console.log('Error logging into Facebook', e));
+  // }
+
 
 }
