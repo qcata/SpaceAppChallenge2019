@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController, PopoverController } from '@ionic/angular';
 import { TrashlistService } from './trashlist.service';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 @Component({
   selector: 'app-trashlist',
@@ -39,15 +40,18 @@ export class TrashlistPage implements OnInit {
   leftSide = this.trashlist.splice(0, this.halfLength);
   rightSide = this.trashlist.splice(0, this.trashList.length);
 
+  constructor(private socialSharing: SocialSharing) { }
 
-  constructor(
-    public modalController: ModalController,
-    public trashlistService: TrashlistService,
-    public popoverController: PopoverController
-  ) { }
 
   ngOnInit( ) {
     console.log(this.trashlist);
   }
+
+  share(){
+    this.socialSharing.shareViaFacebook('public_profile', 'user_friends', 'email')
+    .then((res: SocialSharing) => console.log('Logged into Facebook!', res))
+    .catch(e => console.log('Error logging into Facebook', e));
+  }
+
 
 }
