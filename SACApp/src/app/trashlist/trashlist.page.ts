@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 @Component({
   selector: 'app-trashlist',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrashlistPage implements OnInit {
 
-  constructor() { }
+  constructor(private socialSharing: SocialSharing) { }
 
   ngOnInit() {
   }
+
+  share(){
+    this.socialSharing.shareViaFacebook("you has x points","arraylike string","url");
+  }
+
 
 }

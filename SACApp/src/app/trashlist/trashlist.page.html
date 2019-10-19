@@ -10,7 +10,7 @@
 
 <ion-grid>
 <ion-row>
-<ion-col *ngFor="let categorie of categories"><ion-button> test1</ion-button> </ion-col>
+<ion-col><ion-button> test1</ion-button> </ion-col>
 
 <ion-col> <ion-button>test1</ion-button> </ion-col>
 
@@ -25,6 +25,6 @@
   
 
 <div id="share">
-<ion-button shape="round" color="primary">Share</ion-button>
+<ion-button shape="round" color="primary" (click)="share()">Share</ion-button>
 </div>
 </ion-content>
