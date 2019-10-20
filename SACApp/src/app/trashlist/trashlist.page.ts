@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController, PopoverController } from '@ionic/angular';
 import { TrashlistService } from './trashlist.service';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+import { OptionListComponent } from './option-list/option-list.component';
 
 @Component({
   selector: 'app-trashlist',
@@ -57,10 +58,29 @@ export class TrashlistPage implements OnInit {
   leftSide = this.trashlist.splice(0, this.halfLength);
   rightSide = this.trashlist.splice(0, this.trashList.length);
 
-  constructor(private socialSharing: SocialSharing) { }
-ngOnInit() {
-}
+  score: number;
 
+  constructor(
+    private socialSharing: SocialSharing,
+    public popoverController: PopoverController
+  ) { }
+  ngOnInit() {
+    if (!localStorage.getItem('number')) {
+      this.score = 0;
+      localStorage.setItem('number', '0');
+    } else {
+      this.score = parseInt(localStorage.getItem('number'));
+    }
+  }
+
+  async presentPopover(ev: any) {
+    const popover = await this.popoverController.create({
+      component: OptionListComponent,
+      event: ev,
+      translucent: true
+    });
+    return await popover.present();
+  }
   // share(){
   //   this.socialSharing.shareViaFacebook('public_profile', 'user_friends', 'email')
   //   .then((res: SocialSharing) => console.log('Logged into Facebook!', res))

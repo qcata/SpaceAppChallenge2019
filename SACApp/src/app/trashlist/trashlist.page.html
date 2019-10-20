@@ -5,7 +5,7 @@
 <ion-content>
   <ion-item>
     <ion-label>
-      <h1>Score: </h1>
+      <h1>Score: {{score}} </h1>
     </ion-label>
   </ion-item>
 
@@ -13,14 +13,18 @@
     <ion-row>
       <ion-col size="6">
         <div *ngFor="let trash of leftSide">
-        <ion-button style="height: 100px; width:100px;"><ion-img  style="height: 100px; width:100px;" src={{trash.imageLink}}></ion-img></ion-button>
+          <ion-button (click)="presentPopover(trash)" style="height: 100px; width:100px;">
+            <ion-img style="height: 100px; width:100px;" src={{trash.imageLink}}></ion-img>
+          </ion-button>
         </div>
       </ion-col>
       <ion-col size="6">
-          <div *ngFor="let trash of rightSide">
-        <ion-button style="height: 100px; width:100px;"><ion-img  style="height: 100px; width:100px;" src={{trash.imageLink}}></ion-img></ion-button>
-          </div>
-        </ion-col>
+        <div *ngFor="let trash of rightSide">
+          <ion-button (click)="presentPopover(trash)" style="height: 100px; width:100px;">
+            <ion-img style="height: 100px; width:100px;" src={{trash.imageLink}}></ion-img>
+          </ion-button>
+        </div>
+      </ion-col>
     </ion-row>
   </ion-grid>
   <div id="share">

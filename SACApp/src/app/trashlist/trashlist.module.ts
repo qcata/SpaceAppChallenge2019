@@ -7,6 +7,7 @@ import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { IonicModule } from '@ionic/angular';
 
 import { TrashlistPage } from './trashlist.page';
+import { OptionListComponent } from './option-list/option-list.component';
 
 const routes: Routes = [
   {
@@ -22,7 +23,8 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [TrashlistPage],
-  providers: [SocialSharing ]
+  declarations: [TrashlistPage, OptionListComponent],
+  providers: [SocialSharing ],
+  entryComponents: [OptionListComponent]
 })
 export class TrashlistPageModule {}

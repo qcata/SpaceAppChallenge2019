@@ -9,8 +9,8 @@ import { User } from '../Models/UserModel';
 export class AuthenticationService {
 
   user = {
-    username: 'admin',
-    password: 'admin123'
+    username: 'a',
+    password: 'a'
   };
 
   constructor() { }

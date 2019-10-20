@@ -1,0 +1,15 @@
+<ion-label></ion-label>
+<ion-row>
+  <ion-col offset="1">
+    <ion-label class="title">Choose number of colected items</ion-label>
+  </ion-col>
+</ion-row>
+<ion-item>
+  <ion-range [(ngModel)]="numberOfItem" (ionChange)="setBadge()" min="0" max="200" pin>
+    <ion-icon slot="start" size="small"></ion-icon>
+    <ion-icon slot="end"></ion-icon>
+  </ion-range>
+</ion-item>
+<ion-row justify-content-center align-items-center style="margin-top: 20px;">
+  <ion-button type="submit" (click)="collect()" shape="round">Collect</ion-button>
+</ion-row>

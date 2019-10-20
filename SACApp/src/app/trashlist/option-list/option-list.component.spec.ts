@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TrashlistPage } from './trashlist.page';
+import { OptionListComponent } from './option-list.component';
 
-describe('TrashlistPage', () => {
-  let component: TrashlistPage;
-  let fixture: ComponentFixture<TrashlistPage>;
+describe('OptionListComponent', () => {
+  let component: OptionListComponent;
+  let fixture: ComponentFixture<OptionListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TrashlistPage ],
+      declarations: [ OptionListComponent ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TrashlistPage);
+    fixture = TestBed.createComponent(OptionListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
