@@ -16,7 +16,7 @@ export class OptionListComponent implements OnInit {
   sc: any;
 
   public scoreProvizoriu;
-  numberOfItem;
+  numberOfItem = 0;
   // numberOfItems = [
   //   {
   //     id: 1,
@@ -49,19 +49,19 @@ export class OptionListComponent implements OnInit {
     }
   }
   setBadge() {
-    this.score = this.sc;
+    this.score = this.numberOfItem;
   }
 
   async collect() {
     console.log('sus');
+    
+    this.localStorageScore = parseInt(localStorage.getItem('number'));
+    localStorage.removeItem('number');
+    this.localStorageScore +=  this.score;
+    localStorage.setItem('number', this.localStorageScore.toString());
+    console.log('gd');
 
-    // this.localStorageScore = parseInt(localStorage.getItem('number'));
-    // localStorage.clear();
-    // this.localStorageScore +=  this.sc;
-    // localStorage.setItem('number', this.localStorageScore.toString());
-    // console.log('gd');
-
-    localStorage.setItem('scorProvizoriu', this.sc);
+   // localStorage.setItem('scorProvizoriu', this.sc);
       this.popoverController.dismiss();
   }
 

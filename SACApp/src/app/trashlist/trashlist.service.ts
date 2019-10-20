@@ -12,6 +12,7 @@ export class TrashlistService {
 
   setScore(score: number) {
     this.score += score;
+    
     localStorage.setItem('score', this.score.toString());
   }
 

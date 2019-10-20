@@ -4,6 +4,7 @@ import { TrashlistService } from './trashlist.service';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { OptionListComponent } from './option-list/option-list.component';
 
+
 @Component({
   selector: 'app-trashlist',
   templateUrl: './trashlist.page.html',
@@ -69,7 +70,7 @@ export class TrashlistPage implements OnInit {
   ngOnInit() {
     if (!localStorage.getItem('number')) {
       this.score = 0;
-      localStorage.setItem('number', '0');
+      localStorage.setItem('number', this.score.toString());
     } else {
       this.score = parseInt(localStorage.getItem('number'));
     }
@@ -81,7 +82,7 @@ export class TrashlistPage implements OnInit {
       event: ev,
       translucent: true
     });
-    localStorage.removeItem('scorProvizoriu');
+   // localStorage.removeItem('number');
     return await popover.present();
   }
   // share(){
