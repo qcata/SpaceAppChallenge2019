@@ -58,6 +58,8 @@ export class TrashlistPage implements OnInit {
   leftSide = this.trashlist.splice(0, this.halfLength);
   rightSide = this.trashlist.splice(0, this.trashList.length);
 
+
+
   score: number;
 
   constructor(
@@ -79,6 +81,7 @@ export class TrashlistPage implements OnInit {
       event: ev,
       translucent: true
     });
+    localStorage.removeItem('scorProvizoriu');
     return await popover.present();
   }
   // share(){
@@ -87,11 +90,9 @@ export class TrashlistPage implements OnInit {
   //   .catch(e => console.log('Error logging into Facebook', e));
   // }
 
-  // share(){
-  //   this.socialSharing.shareViaFacebook('public_profile', 'user_friends', 'email')
-  //   .then((res: SocialSharing) => console.log('Logged into Facebook!', res))
-  //   .catch(e => console.log('Error logging into Facebook', e));
-  // }
+share() {
+  window.open('https://www.facebook.com/sharer/sharer.php?u={{gfdss}}');
+}
 
 
 }

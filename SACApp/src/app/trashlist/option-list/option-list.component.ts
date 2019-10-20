@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TrashlistService } from '../trashlist.service';
 import { NgForm } from '@angular/forms';
+import { ViewController } from '@ionic/core';
+import { PopoverController } from '@ionic/angular';
 
 @Component({
   selector: 'app-option-list',
@@ -12,6 +14,8 @@ export class OptionListComponent implements OnInit {
   scoreString: string;
   scoreNumber: number;
   sc: any;
+
+  public scoreProvizoriu;
   numberOfItem;
   // numberOfItems = [
   //   {
@@ -28,10 +32,13 @@ export class OptionListComponent implements OnInit {
   //   },
   // ];
   localStorageScore: any;
- score: any;
+  score: any;
   constructor(
-    public trashlistService: TrashlistService
+    public trashlistService: TrashlistService,
+    public popoverController: PopoverController
+
   ) { }
+
 
   ngOnInit() { }
 
@@ -45,14 +52,21 @@ export class OptionListComponent implements OnInit {
     this.score = this.sc;
   }
 
-  collect() {
+  async collect() {
     console.log('sus');
 
-    this.localStorageScore = parseInt(localStorage.getItem('number'));
-    localStorage.clear();
-    this.localStorageScore +=  this.sc;
-    localStorage.setItem('number', this.localStorageScore.toString());
-    console.log('gd');
+    // this.localStorageScore = parseInt(localStorage.getItem('number'));
+    // localStorage.clear();
+    // this.localStorageScore +=  this.sc;
+    // localStorage.setItem('number', this.localStorageScore.toString());
+    // console.log('gd');
+
+    localStorage.setItem('scorProvizoriu', this.sc);
+      this.popoverController.dismiss();
+  }
+
+  close() {
+
   }
 
 }
