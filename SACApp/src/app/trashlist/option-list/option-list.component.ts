@@ -42,25 +42,15 @@ export class OptionListComponent implements OnInit {
 
   ngOnInit() { }
 
-  setPrice(form: NgForm) {
-    if (form.value.id === 1 || form.value.id === 1) {
-      this.scoreString = form.value.range.splice('-');
-      console.log(this.scoreString);
-    }
-  }
   setBadge() {
     this.score = this.numberOfItem;
   }
 
   async collect() {
-    console.log('sus');
-    
     this.localStorageScore = parseInt(localStorage.getItem('number'));
     localStorage.removeItem('number');
     this.localStorageScore +=  this.score;
     localStorage.setItem('number', this.localStorageScore.toString());
-    console.log('gd');
-
    // localStorage.setItem('scorProvizoriu', this.sc);
       this.popoverController.dismiss();
   }

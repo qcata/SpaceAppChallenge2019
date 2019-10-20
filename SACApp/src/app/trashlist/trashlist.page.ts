@@ -74,8 +74,8 @@ export class TrashlistPage implements OnInit {
     } else {
       this.score = parseInt(localStorage.getItem('number'));
     }
-  }
 
+  }
   async presentPopover(ev: any) {
     const popover = await this.popoverController.create({
       component: OptionListComponent,
@@ -83,6 +83,9 @@ export class TrashlistPage implements OnInit {
       translucent: true
     });
    // localStorage.removeItem('number');
+    popover.onDidDismiss().then(() => {
+      this.score= parseInt(localStorage.getItem('number'));
+    });
     return await popover.present();
   }
   // share(){
