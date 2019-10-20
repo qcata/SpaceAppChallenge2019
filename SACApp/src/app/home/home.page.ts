@@ -18,7 +18,7 @@ export class HomePage implements OnInit {
     setTimeout(() => {
       this.router.navigate(['/login']);
     },
-      1500);
+      6000);
   }
   login() {
     this.router.navigateByUrl('/login');
