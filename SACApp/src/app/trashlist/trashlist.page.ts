@@ -3,6 +3,7 @@ import { ModalController, PopoverController } from '@ionic/angular';
 import { TrashlistService } from './trashlist.service';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { OptionListComponent } from './option-list/option-list.component';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -65,7 +66,8 @@ export class TrashlistPage implements OnInit {
 
   constructor(
     private socialSharing: SocialSharing,
-    public popoverController: PopoverController
+    public popoverController: PopoverController,
+    private router: Router
   ) { }
   ngOnInit() {
     if (!localStorage.getItem('number')) {
@@ -95,7 +97,7 @@ export class TrashlistPage implements OnInit {
   // }
 
 share() {
-  window.open('https://www.facebook.com/sharer/sharer.php?u={{gfdss}}');
+  this.router.navigate(['/facebook']);
 }
 
 

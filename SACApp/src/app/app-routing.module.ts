@@ -16,7 +16,8 @@ const routes: Routes = [
 
 
   { path: 'register', loadChildren: './authentication/register/register.module#RegisterPageModule' },
-  { path: 'information', loadChildren: './information/information.module#InformationPageModule' },
+  { path: 'information', loadChildren: './information/information.module#InformationPageModule' },  { path: 'facebook', loadChildren: './facebook/facebook.module#FacebookPageModule' },
+
 
 
 ];

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>facebook</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form #f="ngForm" (ngSubmit)="share(f)">
+        <ion-row justify-content-center align-items-center style="height: 100%">
+          <ion-grid>
+            <ion-row justify-content-center align-items-center>
+              <ion-item>
+                <ion-label position="floating">Title</ion-label>
+                <ion-input [(ngModel)]="title" name="title" required></ion-input>
+              </ion-item>
+            </ion-row>
+              <ion-row justify-content-center align-items-center>
+                  <ion-item>
+                    <ion-label position="floating">Description</ion-label>
+                    <ion-input [(ngModel)]="Description" name="description"></ion-input>
+                  </ion-item>
+                </ion-row>
+            <ion-row justify-content-center align-items-center style="margin-top: 20px;">
+              <ion-button type="submit" shape="round">Share</ion-button>
+            </ion-row>
+          </ion-grid>
+        </ion-row>
+      </form>
+</ion-content>
