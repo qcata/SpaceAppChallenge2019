@@ -14,14 +14,14 @@
       <ion-col size="6">
         <div *ngFor="let trash of leftSide">
           <ion-button (click)="presentPopover(trash)" style="height: 100px; width:100px;">
-            <ion-img style="height: 100px; width:100px;" src={{trash.imageLink}}></ion-img>
+            <ion-img style="height: 100px; width:100px;filter: invert(100%);" src={{trash.imageLink}}  ></ion-img>
           </ion-button>
         </div>
       </ion-col>
       <ion-col size="6">
         <div *ngFor="let trash of rightSide">
           <ion-button (click)="presentPopover(trash)" style="height: 100px; width:100px;">
-            <ion-img style="height: 100px; width:100px;" src={{trash.imageLink}}></ion-img>
+            <ion-img style="height: 100px; width:100px; filter: invert(100%);" src={{trash.imageLink}}></ion-img>
           </ion-button>
         </div>
       </ion-col>

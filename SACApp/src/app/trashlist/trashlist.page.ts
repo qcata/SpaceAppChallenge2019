@@ -49,7 +49,7 @@ export class TrashlistPage implements OnInit {
       points: 1
     },
     {
-      imageLink:'http://pngimages.net/sites/default/files/trash-logo-png-image-83522.png',
+      imageLink:'https://www.pngrepo.com/download/14988/trash.png',
       trashName: 'Other',
       points: 1
     }
